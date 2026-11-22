@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    color: #222;
+}
+
+header {
+    background: #183b32;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+}
+
+.welcome {
+    background: #e4f3eb;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.welcome h1 {
+    color: #183b32;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 18px;
+}
+
+#search {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background: #267451;
+    color: white;
+}
+
+button:hover {
+    background: #183b32;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+}
+
+.food-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.food-card .emoji {
+    font-size: 42px;
+}
+
+.food-card h3 {
+    margin: 10px 0;
+}
+
+.food-card p {
+    margin-bottom: 12px;
+}
+
+.cart-section {
+    background: white;
+    padding: 25px;
+    margin-top: 35px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item button {
+    padding: 6px 10px;
+}
+
+.bill {
+    text-align: right;
+    margin: 20px 0;
+    line-height: 2;
+}
+
+.checkout {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.receipt {
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border: 2px dashed #267451;
+    border-radius: 12px;
+    line-height: 2;
+}
+
+footer {
+    background: #183b32;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #receipt, #receipt * {
+        visibility: visible;
+    }
+
+    #receipt {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #receipt button {
+        display: none;
+    }
+}

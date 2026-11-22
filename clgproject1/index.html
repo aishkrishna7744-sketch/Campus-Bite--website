@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusBite | College Canteen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">CampusBite 🍴</div>
+    <p>Fresh Food. Quick Orders. Happy Students.</p>
+</header>
+
+<main>
+    <section class="welcome">
+        <h1>Welcome to CampusBite</h1>
+        <p>Your campus food ordering companion.</p>
+    </section>
+
+    <section class="menu-section">
+        <h2>Explore Our Menu</h2>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search food..."
+        >
+
+        <div class="filters">
+            <button onclick="filterFood('All')">All</button>
+            <button onclick="filterFood('Breakfast')">Breakfast</button>
+            <button onclick="filterFood('Lunch')">Lunch</button>
+            <button onclick="filterFood('Drinks')">Drinks</button>
+        </div>
+
+        <div id="menu" class="menu"></div>
+    </section>
+
+    <section class="cart-section">
+        <h2>🛒 Your Cart</h2>
+        <div id="cart"></div>
+
+        <div class="bill">
+            <p>Subtotal: <span id="subtotal">₹0</span></p>
+            <p>Tax (5%): <span id="tax">₹0</span></p>
+            <h3>Total: <span id="total">₹0</span></h3>
+        </div>
+
+        <button class="checkout" onclick="placeOrder()">
+            Place Order
+        </button>
+    </section>
+
+    <section id="receipt" class="receipt" hidden>
+        <h2>Order Confirmed! 🎉</h2>
+        <p id="orderId"></p>
+        <div id="receiptDetails"></div>
+        <h3 id="receiptTotal"></h3>
+        <button onclick="window.print()">Print Receipt</button>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 CampusBite | College Canteen Ordering System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
